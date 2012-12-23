@@ -19,6 +19,10 @@
 
 [difftool]
     prompt = false
+    tool = Kaleidoscope
+
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [help]
     autocorrect = 1
@@ -26,8 +30,16 @@
 [hub]
     protocol = https
 
+[merge]
+	tool = Kaleidoscope
+
 [mergetool]
     keepBackup = false
+    prompt = false
+
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
 
 [push]
 	default = simple

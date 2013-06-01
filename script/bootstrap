@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # bootstrap installs things.
 
@@ -40,6 +40,14 @@ setup_gitconfig () {
 
     success 'gitconfig'
   fi
+}
+
+update_submodules () {
+  info 'installing submodules'
+
+  git submodule update --init 2>&1 > /dev/null
+
+  success 'submodules installed'
 }
 
 link_files () {
@@ -115,6 +123,7 @@ install_dotfiles () {
 }
 
 setup_gitconfig
+update_submodules
 install_dotfiles
 
 # If we are on a mac, lets install and setup homebrew

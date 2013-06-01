@@ -1,43 +1,37 @@
-[alias]
-    discard = checkout --
-    squash = merge --squash
-    unstage = reset HEAD --
-
-[color]
-    branch = auto
-    diff = auto
-    status = auto
-    ui = true
-
-[core]
-    autocrlf = input
-    editor = vim
-    excludesfile = ~/.gitignore
-
-[credential]
-    helper = osxkeychain
-
-[difftool]
-    prompt = false
-
-[help]
-    autocorrect = 1
+# Sample gitconfig
+#
 
 [hub]
-    protocol = https
-
-[mergetool]
-    keepBackup = false
-
-[push]
-	default = simple
-
-[tar "tbz2"]
-    command = bzip2 -z9
-
-[tar "tar.bz2"]
-    command = bzip2 -z9
-
+        protocol = https
 [user]
-    email = alfonso@al.fon.so
-    name = Alfonso Boza
+        name = Carlos Corvaia
+        email = carloscor50@gmail.com
+        helper = osxkeychain
+[alias]
+        co = checkout
+        promote = !$ZSH/bin/git-promote
+        wtf     = !$ZSH/bin/git-wtf
+        rank-contributers = !$ZSH/bin/git-rank-contributers
+        count   = !git shortlog -sn
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+        excludesfile = ~/.gitignore
+        editor = vim
+[apply]
+        whitespace = nowarn
+[mergetool]
+        keepBackup = false
+[difftool]
+        prompt = false
+[help]
+        autocorrect = 1
+[push]
+        # See `git help config` (search for push.default)
+        # for more information on different options of the below setting.
+        #
+        # Setting to git 2.0 default to surpress warning message
+        default = simple

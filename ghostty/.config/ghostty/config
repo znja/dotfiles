@@ -1,1 +1,4 @@
 theme = tokyonight
+
+keybind = shift+enter=text:\
+scrollback-limit = 100000000

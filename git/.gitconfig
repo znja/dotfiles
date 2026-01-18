@@ -1,0 +1,20 @@
+[user]
+	email = carlos.corvaia@shopify.com
+	name = Carlos Corvaia
+[include]
+	path = /Users/carloscorvaia/.config/dev/gitconfig
+[init]
+    templateDir = ~/.config/git/template/
+[alias]
+	logline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	squash-all = "!f() { base=${1:-main}; git reset --soft $(git merge-base HEAD $base) && git commit --edit; }; f"
+[core]
+	editor = code --wait
+[push]
+	autoSetupRemote = true
+[maintenance]
+	repo = /Users/carloscorvaia/world/trees/root/src
+	repo = /Users/carloscorvaia/world/trees/ai-enforce-test-lint-check-after-changes/src
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

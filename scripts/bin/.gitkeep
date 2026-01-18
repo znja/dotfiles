@@ -1,0 +1,3 @@
+# Place your scripts here
+# After stowing, they'll be available at ~/bin/
+# Make sure to add ~/bin to your PATH in .zshrc

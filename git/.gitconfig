@@ -9,7 +9,7 @@
 	logline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	squash-all = "!f() { base=${1:-main}; git reset --soft $(git merge-base HEAD $base) && git commit --edit; }; f"
 [core]
-	editor = code --wait
+	editor = nvim
 [push]
 	autoSetupRemote = true
 [maintenance]

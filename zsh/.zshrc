@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME=""
 
 # Plugins
 plugins=(git git-flow fzf z zsh-autocomplete zsh-autosuggestions zsh-syntax-highlighting)
@@ -24,7 +24,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # Homebrew PATH for Apple Silicon
 export PATH="/opt/homebrew/bin:$PATH"
